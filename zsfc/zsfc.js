@@ -38,6 +38,9 @@ const $ = new Env(`🏎️ 掌上飞车`)
  */
 const isreq = typeof $request !== 'undefined';
 
+// 输出日志，开始每日签到
+$.log(`🧑‍💻 开始掌上飞车每日签到`);
+
 /**
  * 主函数，用于执行打卡操作或设置请求数据
  */
