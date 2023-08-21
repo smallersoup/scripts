@@ -13,7 +13,7 @@ http:
   mitm:
     - "mwegame.qq.com"
   script:
-    - match: *
+    - match: .*qq.*
       #match: ^https://mwegame\.qq\.com/ams/sign/doSign/month
       name: zhangshangfeiche
       type: request # request / response
