@@ -1,0 +1,22 @@
+cron:
+  script:
+    - name: zhangshangfeiche
+      cron: '0 12 * * *'
+      # argument: '{ "key": true }' # optional
+      timeout: 10 # optional
+
+http:
+  script:
+    - match: ^https://mwegame\.qq\.com/ams/sign/doSign/month
+      name: zhangshangfeiche
+      type: request # request / response
+      require-body: true
+      timeout: 10
+      argument: ''
+      binary-mode: false
+      max-size: 1048576 # 1MB      
+
+script-providers:
+  zhangshangfeiche:
+    url: https://github.com/chavyleung/scripts/blob/master/zsfc/zsfc.js
+    interval: 86400
