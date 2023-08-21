@@ -22,6 +22,6 @@ http:
 
 script-providers:
   zhangshangfeiche:
-    url: https://github.com/chavyleung/scripts/blob/master/zsfc/zsfc.js
+    url: https://raw.githubusercontent.com/smallersoup/scripts/for-me/zsfc/zsfc.js
     #interval: 86400
     interval: 10
