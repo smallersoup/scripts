@@ -13,7 +13,8 @@ http:
   mitm:
     - "mwegame.qq.com"
   script:
-    - match: ^https://mwegame\.qq\.com/ams/sign/doSign/month
+    - match: *
+      #match: ^https://mwegame\.qq\.com/ams/sign/doSign/month
       name: zhangshangfeiche
       type: request # request / response
       require-body: true
