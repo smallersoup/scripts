@@ -16,11 +16,12 @@ http:
       type: request # request / response
       require-body: true
       timeout: 10
-      argument: ''
+      #argument: ''
       binary-mode: false
       max-size: 1048576 # 1MB      
 
 script-providers:
   zhangshangfeiche:
     url: https://github.com/chavyleung/scripts/blob/master/zsfc/zsfc.js
-    interval: 86400
+    #interval: 86400
+    interval: 10
