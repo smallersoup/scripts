@@ -1,3 +1,6 @@
+name: zhangshangfeiche-executor
+desc: 掌上飞车执行器
+
 cron:
   script:
     - name: zhangshangfeiche
