@@ -6,7 +6,6 @@ cron:
     - name: zhangshangfeiche
       #cron: '0 12 * * *'
       cron: '* * * * *'
-      # argument: '{ "key": true }' # optional
       timeout: 10 # optional
 
 http:
@@ -17,7 +16,7 @@ http:
       require-body: false
       timeout: 10
       binary-mode: false
-      max-size: 1048576 # 1MB      
+      max-size: 1048576
 
 script-providers:
   zhangshangfeiche:
