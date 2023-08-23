@@ -4,8 +4,7 @@ desc: 掌上飞车执行器
 cron:
   script:
     - name: zhangshangfeiche
-      #cron: '0 12 * * *'
-      cron: '* * * * *'
+      cron: '0 12 * * *'
       timeout: 10 # optional
 
 http:
