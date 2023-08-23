@@ -11,8 +11,7 @@ cron:
 
 http:
   script:
-    - match: ^https://.*\.qq\.com/.*
-      #match: ^https://mwegame\.qq\.com/ams/sign/doSign/month
+    - match: ^https://mwegame\.qq\.com/ams/sign/doSign/month.*
       name: zhangshangfeiche
       type: request # request / response
       require-body: true
@@ -24,5 +23,4 @@ http:
 script-providers:
   zhangshangfeiche:
     url: https://raw.githubusercontent.com/smallersoup/scripts/for-me/zsfc/zsfc.js
-    #interval: 86400
-    interval: 10
+    interval: 86400
