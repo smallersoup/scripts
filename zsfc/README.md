@@ -39,6 +39,42 @@ hostname = mwegame.qq.com
 0 10 0 * * * https://raw.githubusercontent.com/chiupam/surge/main/scripts/javascripts/zsfc.js, tag=掌上飞车, enabled=true
 ```
 
+## 配置 Stash
+1. 在 首页 -> 配置-> Mitm 中增加 `mwegame.qq.com` ，然后点击 Mitm 的开关会弹出安装证书：
+   - 点击安装证书：用 safari 浏览器打开并下载证书
+   - 安装证书：设置 -> 通用 VPN 与设备管理 -> 已下载的描述文件 安装证书
+   - 信任证书：设置 -> 关于本机 -> 证书信任设置 -> 将 Stash 的根证书点击信任
+2. 订阅链接：https://raw.githubusercontent.com/smallersoup/scripts/for-me/zsfc/executor.stoverride  其中的内容如下：
+```yaml
+name: 掌上飞车
+desc: 掌上飞车执行器
+
+cron:
+  script:
+    - name: zhangshangfeiche
+      cron: '0 12 * * *'
+      timeout: 10 # optional
+
+http:
+  script:
+    - match: ^https://mwegame\.qq\.com/ams/sign/doSign/month
+      name: zhangshangfeiche
+      type: request
+      require-body: false
+      timeout: 10
+      binary-mode: false
+      max-size: 1048576
+
+script-providers:
+  zhangshangfeiche:
+    #url: https://raw.githubusercontent.com/smallersoup/scripts/for-me/zsfc/zsfc.js
+    url: https://raw.githubusercontent.com/chiupam/surge/main/scripts/javascripts/zsfc.js
+    interval: 86400
+```
+3. 打开 APP[掌上飞车](https://apps.apple.com/cn/app/%E6%8E%8C%E4%B8%8A%E9%A3%9E%E8%BD%A6/id1116903233) 然后手动签到 1 次, 系统提示: `✅ 获取签到数据成功！`
+4. 运行一次脚本, 如果提示重复签到, 那就算成功了!
+ 
+
 ## 说明
 
 1. 先把`mwegame.qq.com`加到`[MITM]`
