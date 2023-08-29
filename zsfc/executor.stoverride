@@ -5,7 +5,7 @@ cron:
   script:
     - name: zhangshangfeiche
       #cron: '0 12 * * *'
-      cron: '1 * * * *'
+      cron: '*/1 * * * *'
       timeout: 10 # optional
 
 http:
